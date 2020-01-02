@@ -22,10 +22,10 @@
 	</taskdef>	
 	
 	<!-- Deploy -->
-	<target name="deploy" depends="undeploy">
+	<target name="deploy">
 		
 		<!-- Download and deploy ApexMocks -->
-		<delete dir="${basedir}/lib/apexmocks"/>
+		<!--delete dir="${basedir}/lib/apexmocks"/>
 		<echo message="Cloning fflib-apex-mocks..."/>
 		<git:git directory="${basedir}/lib/apexmocks" verbose="false">
 			<git:clone uri="https://github.com/financialforcedev/fflib-apex-mocks.git"/>
@@ -35,14 +35,14 @@
 	        password="${sf.password}" 
 	        serverurl="${sf.server}"
 	        testLevel="RunLocalTests" 
-	        deployRoot="${basedir}/lib/apexmocks/src"/>
+	        deployRoot="${basedir}/lib/apexmocks/src"/-->
 	
 		<!-- Deploy Apex Commons -->		
 		<sf:deploy 
-	        username="${sf.username}" 
-	        password="${sf.password}" 
-	        serverurl="${sf.server}"
-	        testLevel="RunLocalTests" 
+	        username="abdullah@cunning-hawk-asj31x.com" 
+	        password="Happy20192LzPlv4x8wXYpkAJ85VAaUYvI" 
+	        serverurl="https://login.salesforce.com"
+	        testLevel="NoTestRun" 
 	        deployRoot="${basedir}/fflib/src"/>
 	        
 	</target>
